@@ -19,7 +19,9 @@ const mainfunc = (time) => {
       progress.style.width = `${count}%`;
       perCount.textContent = `${count}%`;
       count++;
+      donebtn.disabled = true;
     } else {
+        donebtn.disabled = false;
       clearInterval(interval);
       window.addEventListener("keydown", (event) => {
         if (event.key == "Enter") {
